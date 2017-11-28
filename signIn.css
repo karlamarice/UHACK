@@ -14,7 +14,7 @@ body {
 }
 
 #icon {
-    background: url(icons/N.png);
+    background: url(images/N.png);
     margin-left: auto;
     margin-right: auto;
     width: 158px;
@@ -33,4 +33,58 @@ body {
     margin-top: -7%;
     display: block;
     z-index: -3;
+}
+
+h1 {
+    font-family: TW Cen MT;
+    /*font-size: 25px;*/
+    color: white;
+    letter-spacing: 7px;
+    position: relative;
+    font-weight: 1;
+    margin-top: -60%;
+    margin-left: 10%;
+}
+
+#login {
+    position: relative;
+    margin-left: 40%;
+    margin-right: 20%;
+}
+
+
+.text-line {
+    background-color: transparent;
+    color: #eeeeee;
+    outline: none;
+    outline-style: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid #eeeeee 1px;
+    padding: 20px 50px;
+    text-align: left;
+}
+
+.submit-btn {
+    margin-left: 3.5%;
+    margin-top: 3%;
+    background-color: transparent;
+    border-radius: white;
+    border-width: thin;
+    color: white;
+    padding: 14px 34px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 15px;
+}
+
+.submit-btn:hover {
+    background-color:#4CAF50;
+    color: white;
+    border:#4CAF50;
+    border-width: thin;
 }
