@@ -1,23 +1,21 @@
 <html>
     <head>
-        <title> Procure to Pay Home </title>
+        <title> Procure to Pay </title>
         <link rel="stylesheet" type="text/css" href ="signIn.css">
     </head>
-   
     <body>
-        <div id="circle"></div>
+		<div id="circle"></div>
         <div id="icon"></div>
         <div id="rectangle"></div>
-
-       <div id="login">
+		
+		 <div id="login">
             <h1>SIGN IN</h1>
-                <form>
-                <input type="text" class="text-line" placeholder="Company ID"> <br>
-                <input type="password" class="text-line" placeholder="Password"> <br>
-                <button type="button" class="submit-btn"> Login </button>
+            <form action=".\php\signIn.php" method="post">
+                <input type="text" name="username" class="text-line" placeholder="Company ID"> <br>
+                <input type="password" name="password" class="text-line" placeholder="Password"> <br>
+                <input type="Submit" class="submit-btn" value = "Login">
                 <button type="button" class="submit-btn"> Forgot </button>
             </form>
         </div>
     </body>
 </html>
-
