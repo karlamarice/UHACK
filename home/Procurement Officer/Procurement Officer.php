@@ -22,15 +22,23 @@
 
         <!--Side Navigation bar-->
         <nav>
-			<ul class="ul-sidenav">
-                <li class="li-sidenav"><a href="#"><img class="icons" src="../../res/H.png"/> Home </a></li> 
+            <ul class="ul-sidenav">
                 <li class="li-sidenav"><a href="PO-proc.php"><img class="icons" src="../../res/pro.png"/> Procurement </a></li>
                 <li class="li-sidenav"><a href="PO-pay.php"><img class="icons" src="../../res/pay.png"/> Payment Process </a></li>
-                <li class="li-sidenav"><a href="PO-asset.php"><img class="icons" src="../../res/ass.png"/> Asset Management </a></li>
+                <li class="li-sidenav"><a href="#"><img class="icons" src="../../res/ass.png"/> Asset Management </a></li>
                 <li class="li-sidenav"><a href="PO-acct.php"><img class="icons" src="../../res/MA.png"/>My Account</a></li>
                 <li class="li-sidenav"><a href="PO-out.php"><img class="icons" src="../../res/SO.png"/>Sign out</a></li>
-			</ul>
+            </ul>
         </nav>
 
+        <div id="tab-asset">
+            <div id="tabbed">
+                <ul>
+                    <li> <br>Transfer  </li>
+                    <li> Request <br> Item</li>
+                    <li class="active">View List <br> Assets</li>
+                </ul>
+            </div>
+        </div>
     </body>
 </html>
