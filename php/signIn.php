@@ -1,5 +1,4 @@
 <?php
-
 	session_start();
 	include 'connect.php';
 
@@ -29,11 +28,11 @@
 				$_SESSION['password'] = $dbpassword;
 				$_SESSION['name'] = $dbname;
 				$_SESSION['position'] = $dbposition;
+				$_SESSION['login'] = "true";
 				echo '<script language="javascript">';
 				echo 'alert("Logged in successfully!")';
 				echo '</script>';
 				echo '<META HTTP-EQUIV="Refresh" Content="0.001; URL=../home/', $_SESSION['position'], '/', $_SESSION['position'], '.php">';
-				header('Location: ../home/', $_SESSION['position'], '/', $_SESSION['position'], '.html');
 				exit(); 
 			}else{
 				echo '<script language="javascript">';
