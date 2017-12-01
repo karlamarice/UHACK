@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 30, 2017 at 10:43 PM
+-- Generation Time: Dec 01, 2017 at 02:22 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -71,6 +71,75 @@ CREATE TABLE `bidinfo` (
 
 INSERT INTO `bidinfo` (`code`, `itemType`, `reqSpec`) VALUES
 ('PHN1121', 'Phone', 'Display: 5.00-inch,\r\nProcessor: 1GHz quad-core,\r\nFront Camera: 5-megapixel,\r\nResolution: 720x1280 pixels,\r\nRAM: 2GB,\r\nOS: Android 5.0,\r\nStorage: 16GB,\r\nRear Camera: 8-megapixel');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `car`
+--
+
+CREATE TABLE `car` (
+  `username` varchar(50) NOT NULL,
+  `reqUnits` varchar(50) NOT NULL,
+  `reqCode` varchar(50) NOT NULL,
+  `reqDate` date NOT NULL,
+  `reqCarNo` int(11) NOT NULL,
+  `qty1` int(11) NOT NULL,
+  `desc1` text NOT NULL,
+  `euc1` float NOT NULL,
+  `etc1` float NOT NULL,
+  `name1` varchar(50) NOT NULL,
+  `check1` varchar(50) NOT NULL,
+  `qty2` int(11) NOT NULL,
+  `desc2` text NOT NULL,
+  `euc2` float NOT NULL,
+  `etc2` float NOT NULL,
+  `name2` varchar(50) NOT NULL,
+  `check2` varchar(50) NOT NULL,
+  `qty3` int(11) NOT NULL,
+  `desc3` text NOT NULL,
+  `euc3` float NOT NULL,
+  `etc3` float NOT NULL,
+  `name3` varchar(50) NOT NULL,
+  `check3` varchar(50) NOT NULL,
+  `qty4` int(11) NOT NULL,
+  `desc4` text NOT NULL,
+  `euc4` float NOT NULL,
+  `etc4` float NOT NULL,
+  `name4` varchar(50) NOT NULL,
+  `check4` varchar(50) NOT NULL,
+  `initial` text NOT NULL,
+  `replacement` text NOT NULL,
+  `reqName` varchar(50) NOT NULL,
+  `reqCheck` varchar(50) NOT NULL,
+  `endName` varchar(50) NOT NULL,
+  `endCheck` varchar(50) NOT NULL,
+  `TMS` text NOT NULL,
+  `tmsDateRec` date NOT NULL,
+  `tmsDateOut` date NOT NULL,
+  `tmsCheck` varchar(50) NOT NULL,
+  `tmsName` varchar(50) NOT NULL,
+  `BPQM` text NOT NULL,
+  `bpqmDateRec` date NOT NULL,
+  `bpqmDateOut` date NOT NULL,
+  `bpqmCheck` varchar(50) NOT NULL,
+  `bpqmName` varchar(50) NOT NULL,
+  `cmchName` varchar(50) NOT NULL,
+  `cmchCheck` varchar(50) NOT NULL,
+  `presName` varchar(50) NOT NULL,
+  `presCheck` varchar(50) NOT NULL,
+  `dateRec` date NOT NULL,
+  `procName` varchar(50) NOT NULL,
+  `procCheck` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `car`
+--
+
+INSERT INTO `car` (`username`, `reqUnits`, `reqCode`, `reqDate`, `reqCarNo`, `qty1`, `desc1`, `euc1`, `etc1`, `name1`, `check1`, `qty2`, `desc2`, `euc2`, `etc2`, `name2`, `check2`, `qty3`, `desc3`, `euc3`, `etc3`, `name3`, `check3`, `qty4`, `desc4`, `euc4`, `etc4`, `name4`, `check4`, `initial`, `replacement`, `reqName`, `reqCheck`, `endName`, `endCheck`, `TMS`, `tmsDateRec`, `tmsDateOut`, `tmsCheck`, `tmsName`, `BPQM`, `bpqmDateRec`, `bpqmDateOut`, `bpqmCheck`, `bpqmName`, `cmchName`, `cmchCheck`, `presName`, `presCheck`, `dateRec`, `procName`, `procCheck`) VALUES
+('userEmployee', '1', '1', '2017-12-01', 1, 1, '1', 1, 1, '1', 'TRUE', 0, '', 0, 0, '', 'FALSE', 0, '', 0, 0, '', 'FALSE', 0, '', 0, 0, '', 'FALSE', '1', '', '1', '', '1', '', '1', '2017-12-01', '2017-12-01', 'TRUE', '1', '1', '2017-12-01', '2017-12-01', 'TRUE', '', '1', 'TRUE', '1', 'TRUE', '2017-12-01', '1', 'TRUE'),
+('userEmployee', '1', '1', '2017-12-06', 1, 1, '1', 1, 1, '1', 'TRUE', 0, '', 0, 0, '', 'FALSE', 0, '', 0, 0, '', 'FALSE', 0, '', 0, 0, '', 'FALSE', '1', '1', '1', '', '1', '', '1', '2017-12-01', '2017-12-01', 'TRUE', '1', '1', '2017-12-01', '2017-12-01', 'TRUE', '', '1', 'TRUE', '1', 'TRUE', '2017-12-01', '1', 'TRUE');
 
 -- --------------------------------------------------------
 
@@ -146,6 +215,116 @@ INSERT INTO `items` (`img`, `code`, `name`, `description`, `supplier`, `brand`, 
 (0x4c6f676f2e706e67, '1', '1', '1', '1', '1', '1', 1),
 (0x43686c6f655f3135352e6a7067, '1', '1', '1', '1', '1', '1', 1),
 (0x43686c6f655f3135352e6a7067, '1', '1', '1', '1', '1', '1', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `requests`
+--
+
+CREATE TABLE `requests` (
+  `username` varchar(50) NOT NULL,
+  `reqUnit` varchar(50) NOT NULL,
+  `SOL` varchar(50) NOT NULL,
+  `reqNum` int(11) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `chargedTo` varchar(50) NOT NULL,
+  `reqDate` date NOT NULL,
+  `qty1` int(11) NOT NULL,
+  `unit1` varchar(50) NOT NULL,
+  `itemDesc1` text NOT NULL,
+  `euc1` float NOT NULL,
+  `etc1` float NOT NULL,
+  `assignee1` varchar(50) NOT NULL,
+  `qty2` int(11) NOT NULL,
+  `unit2` varchar(50) NOT NULL,
+  `itemDesc2` text NOT NULL,
+  `euc2` float NOT NULL,
+  `etc2` float NOT NULL,
+  `assignee2` varchar(50) NOT NULL,
+  `qty3` int(11) NOT NULL,
+  `unit3` varchar(50) NOT NULL,
+  `itemDesc3` text NOT NULL,
+  `euc3` float NOT NULL,
+  `etc3` float NOT NULL,
+  `assignee3` varchar(50) NOT NULL,
+  `qty4` int(11) NOT NULL,
+  `unit4` varchar(50) NOT NULL,
+  `itemDesc4` text NOT NULL,
+  `euc4` float NOT NULL,
+  `etc4` float NOT NULL,
+  `assignee4` varchar(50) NOT NULL,
+  `qty5` int(11) NOT NULL,
+  `unit5` varchar(50) NOT NULL,
+  `itemDesc5` text NOT NULL,
+  `euc5` float NOT NULL,
+  `etc5` float NOT NULL,
+  `assignee5` varchar(50) NOT NULL,
+  `purpose` text NOT NULL,
+  `preparedBy` varchar(50) NOT NULL,
+  `approvedBy` varchar(50) NOT NULL,
+  `er` text NOT NULL,
+  `erName` varchar(50) NOT NULL,
+  `erDate` date NOT NULL,
+  `recieveName` varchar(50) NOT NULL,
+  `date` date NOT NULL,
+  `supplier` varchar(50) NOT NULL,
+  `remarks` text NOT NULL,
+  `cost` float NOT NULL,
+  `expDate` date NOT NULL,
+  `refNo` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `requests`
+--
+
+INSERT INTO `requests` (`username`, `reqUnit`, `SOL`, `reqNum`, `address`, `chargedTo`, `reqDate`, `qty1`, `unit1`, `itemDesc1`, `euc1`, `etc1`, `assignee1`, `qty2`, `unit2`, `itemDesc2`, `euc2`, `etc2`, `assignee2`, `qty3`, `unit3`, `itemDesc3`, `euc3`, `etc3`, `assignee3`, `qty4`, `unit4`, `itemDesc4`, `euc4`, `etc4`, `assignee4`, `qty5`, `unit5`, `itemDesc5`, `euc5`, `etc5`, `assignee5`, `purpose`, `preparedBy`, `approvedBy`, `er`, `erName`, `erDate`, `recieveName`, `date`, `supplier`, `remarks`, `cost`, `expDate`, `refNo`) VALUES
+('userEmployee', '1', '1', 1, '1', '1', '2017-12-02', 1, '1', '1', 1, 1, 'a', 0, '', '', 0, 0, '', 0, '', '', 0, 0, '', 0, '', '', 0, 0, '', 0, '', '', 0, 0, '', '1', '1', '1', '1', '1', '2017-12-02', '1', '2017-12-11', '1', '1', 1, '2017-12-05', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `transfer`
+--
+
+CREATE TABLE `transfer` (
+  `username` varchar(50) NOT NULL,
+  `tfNo` int(11) NOT NULL,
+  `division` varchar(50) NOT NULL,
+  `SOL` varchar(50) NOT NULL,
+  `date` date NOT NULL,
+  `movement` varchar(50) NOT NULL,
+  `fromName` varchar(50) NOT NULL,
+  `toName` varchar(50) NOT NULL,
+  `item` varchar(50) NOT NULL,
+  `qty` int(11) NOT NULL,
+  `unit` varchar(50) NOT NULL,
+  `itemDesc` text NOT NULL,
+  `tagNo` int(11) NOT NULL,
+  `present` varchar(50) NOT NULL,
+  `new` varchar(50) NOT NULL,
+  `cpsr` varchar(50) NOT NULL,
+  `remarks` text NOT NULL,
+  `oGuardCheck` varchar(50) NOT NULL,
+  `rGuardCheck` varchar(50) NOT NULL,
+  `oName` varchar(50) NOT NULL,
+  `oCheck` varchar(50) NOT NULL,
+  `rName` varchar(50) NOT NULL,
+  `rCheck` varchar(50) NOT NULL,
+  `solCheck` varchar(50) NOT NULL,
+  `cName` varchar(50) NOT NULL,
+  `cCheck` varchar(50) NOT NULL,
+  `nName` varchar(50) NOT NULL,
+  `nCheck` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `transfer`
+--
+
+INSERT INTO `transfer` (`username`, `tfNo`, `division`, `SOL`, `date`, `movement`, `fromName`, `toName`, `item`, `qty`, `unit`, `itemDesc`, `tagNo`, `present`, `new`, `cpsr`, `remarks`, `oGuardCheck`, `rGuardCheck`, `oName`, `oCheck`, `rName`, `rCheck`, `solCheck`, `cName`, `cCheck`, `nName`, `nCheck`) VALUES
+('userEmployee', 1, '1', '1', '2017-12-08', 'Division-Unit', '1', '1', '1', 1, '1', '1', 1, '1', '1', '1', '1', 'TRUE', 'TRUE', '1', 'on', '1', 'on', 'on', '1', 'on', '1', 'on');
 
 -- --------------------------------------------------------
 

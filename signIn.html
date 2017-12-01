@@ -1,21 +1,24 @@
 <html>
     <head>
-        <title> Procure to Pay </title>
+        <title> Procure to Pay Home </title>
         <link rel="stylesheet" type="text/css" href ="signIn.css">
     </head>
+       
     <body>
-		<div id="circle"></div>
+        <div id="circle"></div>
         <div id="icon"></div>
         <div id="rectangle"></div>
-		
-		 <div id="login">
+    
+        <div id="login">
             <h1>SIGN IN</h1>
             <form action=".\php\signIn.php" method="post">
-                <input type="text" name="username" class="text-line" placeholder="Company ID"> <br>
-                <input type="password" name="password" class="text-line" placeholder="Password"> <br>
-                <input type="Submit" class="submit-btn" value = "Login">
-                <button class="submit-btn">Supplier</a></button> 
+                <input type="text" class="text-line" name="username" placeholder="Company ID"> <br>
+                <input type="password" class="text-line" name="password" placeholder="Password"> <br>
+                <button class="submit-btn"> Login </button> <!--Dipende sa user position-->
+                <button onclick="window.location.href='../UHACK/home/Vendor or Supplier/vendorSupplier.html'" class="submit-btn">Supplier</a></button> <!--Supplier.html-->
             </form>
         </div>
     </body>
 </html>
+    
+    
