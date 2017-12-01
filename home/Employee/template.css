@@ -64,12 +64,11 @@ p {
 
 nav {
     position: fixed;
-    float: left;
     height:100%;
     width: 20%;
     background-color: #091721;
     padding: 10;
-    top: 0px; left:0px; right:0px;
+    top: 0px; left:0px;
 }
 
 .ul-sidenav {
@@ -118,30 +117,27 @@ img.icons {
 
 /**TABS**/
 #tabbed {
-    width: 80%;
-    height:10%;
-    min-width: 400px;
-    margin-top: -75px;
-    margin-left: 265px;
-    overflow: hidden;
+    width: 1000px;
+    height: 55px;
+    margin-top: -92px;
+    margin-left: 310px;
     transition: border 250ms ease;
-    position: fixed;
+    position: fixed;    
     z-index: 1000;
-
 }
 
 #tabbed ul {
     margin: 0px;
     padding: 0px;
-    overflow: hidden;
     float: left;
-    padding-left: 45px;
     list-style-type: none;
 }
 
 #tabbed ul * {
     margin: 0px;
     padding: 0px;
+    text-decoration: none;
+    color: gray;
 }
 #tabbed ul li {
     display: block;
@@ -184,7 +180,7 @@ img.icons {
 #tabbed ul li:hover:before,
 #tabbed ul li:hover:after {
     background-color: #F4F7F9;
-    color: #444;
+    color: black;
 }
 #tabbed ul li.active {
     z-index: 3;
@@ -193,5 +189,5 @@ img.icons {
 #tabbed ul li.active:before,
 #tabbed ul li.active:after {
     background-color:#F4F7F9;
-    color: #444;
+    color: black;
 }
